@@ -4,8 +4,6 @@ const form = document.querySelector('form');
 // // const weight = parseInt(document.querySelector('#weight'.value))     
 // // this will give empty value 
 
-
-
 form.addEventListener('submit', function(e){
     e.preventDefault();
 
