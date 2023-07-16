@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            background-color: blue;
+            color: white
+        }
+        .invalid{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button id="button">Submit</button>
+
+    <br><br><br>
+    <button onclick="toggleDivDisplayOnClick('myDiv')">Toggle Div Display</button>
+    <div id="myDiv" style="display:none;">This is the content of the div</div>
+    <br><br><br>
+
+    <form id="form">
+        <input type="text" id="name" placeholder="Enter Your Name here"><br>
+        <input type="text" id="email"   placeholder="Enter Your Email here"><br>
+        <button>Submit</button><br>
+    </form>
+</body>
+<script src="ex_03.js"></script>
+</html>
