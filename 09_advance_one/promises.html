@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <script>
+    const cart = ['shoes', 'pants', 'shirts']
+
+        // callback 
+    // api.createOrder( cart, function(orderId){
+    //         api.procedeToPayment(orderId);
+    //     });
+
+        // promise 
+    // const promise = createOrder(cart);
+    // promise.then( function(orderId){
+    //         api.procedeToPayment(orderId);
+    // });
+
+     
+    
+    
+        // promise chaining
+
+    createOrder(cart)
+    .then(function (orderId){
+        procedeToPayment(orderId);
+    })
+    .then(function (paymentInfo){
+        showOrderSummary(paymentInfo);
+    })
+    .then(function (paymentInfo){
+        return updateWalleteBalance(paymentInfo);
+    })
+
+
+
+//   const github_api = "https://api.github.com/users/musharraf07"
+
+//   const user = fetch(github_api)
+//   console.log(user);
+
+
+
+
+</script>
+</body>
+</html>
