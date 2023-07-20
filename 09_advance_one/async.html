@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Musharraf</h1>
+
+    <script>
+        async function mush(){
+            return 5;
+        }
+        // async returns a promise through which we can use .then()
+        mush().then((x) =>{
+            console.log(x);
+        });
+
+
+        async function harry(){
+        let delhiWeather = new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                resolve("28 deg")
+            }, 2000)
+        })
+        let mumbaiWeather = new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                resolve("25 deg")
+            }, 4000)
+        })
+        // delhiWeather.then(alert)
+        // mumbaiWeather.then(alert)
+
+        console.log("Fetching delhi weather please wait...");
+        let delhiW = await delhiWeather
+        console.log(`Delhi weather fethed ${delhiW}`);
+
+
+        console.log("Fetching mumbai weather please wait...");
+        let mumbaiW = await mumbaiWeather
+        console.log(`mumbai weather fethed ${mumbaiW}`);
+        }
+
+
+        console.log("Welcome to weather control room");
+        harry();
+    </script>
+</body>
+</html>
