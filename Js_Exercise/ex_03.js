@@ -46,32 +46,60 @@
 // Q5
 
 
- function validateForm (event){
-    event.preventDefault();
+//  function validateForm (event){
+//     event.preventDefault();
 
-    let isValid =true;
+//     let isValid =true;
 
-    for(let i = 0; i<form.elemenst.length; i++){
-        const input = form.element[i]
-        const value = input.value.trim()
+//     for(let i = 0; i<form.elemenst.length; i++){
+//         const input = form.element[i]
+//         const value = input.value.trim()
 
-        if (input.hasAttribute("required" && value === "")) {
-            isValid = false;
-            input.classList.add('invalid');
-        }
-        else{
-            input.classList.add('invalid');
-        }
-    }
+//         if (input.hasAttribute("required" && value === "")) {
+//             isValid = false;
+//             input.classList.add('invalid');
+//         }
+//         else{
+//             input.classList.add('invalid');
+//         }
+//     }
 
-    const message = document.getElementById("message");
-  if (isValid) {
-    message.classList.remove("error");
-    message.innerText = "Form submitted successfully!";
-  } else {
-    message.classList.add("error");
-    message.innerText = "Please fill out all required fields.";
-  }
+//     const message = document.getElementById("message");
+//   if (isValid) {
+//     message.classList.remove("error");
+//     message.innerText = "Form submitted successfully!";
+//   } else {
+//     message.classList.add("error");
+//     message.innerText = "Please fill out all required fields.";
+//   }
+// }
+// const form = document.getElementById("form");
+// form.addEventListener("submit", validateForm); 
+
+
+
+
+
+
+
+// Q6
+function fetchdata(url, callback) 
+{
+
+  fetch(url)
+  .then(respone => respone.json)
+  .then(data => callback(null, data))
+  .catch(error => callback(error, null))
+  
 }
-const form = document.getElementById("form");
-form.addEventListener("submit", validateForm); 
+
+const url = "https://jsonplaceholder.typicode.com/todos/1";
+fetchdata(url, (error, data) => {
+  if(error){
+    console.log(error);
+  }
+  else{
+    console.log(data);
+  }
+
+})
