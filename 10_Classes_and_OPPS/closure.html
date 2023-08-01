@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #313131;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+</body>
+    <script>
+        // lexical scoping
+
+        // function outer(){
+        //     let name = "musharraf"
+
+        //     function inner(){
+        //         console.log('Inner' ,name);
+        //     }
+        //     inner()
+        // }
+        // outer()
+        // console.log('Outer' ,name);
+
+
+        // closures
+
+        function x(){
+            let a =10;
+            function y(){
+                console.log(a);
+            }
+            a = 100;
+            return y;
+        }
+
+        const z = x()
+        console.log(z);
+
+        z();
+
+
+
+
+
+        
+    </script>
+</html>
