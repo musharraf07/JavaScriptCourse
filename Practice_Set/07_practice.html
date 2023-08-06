@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: cyan;
+            height: 100%;
+            width: 100%;
+        }
+        nav{
+            display: flex;
+
+        }
+        nav li{
+            list-style: none;
+            padding: 0 23px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Blog</li>
+        <li>Contact us</li>
+    </nav>
+
+
+    <table>
+        <td>hello</td>
+        <tr>World</tr>
+        <tr>World</tr>
+        <tr>World</tr>
+        <tr>World</tr>
+    </table>
+</body>
+<script>
+
+document.getElementsByTagName("nav")[0].firstElementChild.style.color = "red";
+document.getElementsByTagName("nav")[0].firstElementChild.style.color = "orange";
+document.getElementsByTagName("nav")[0].lastElementChild.style.color = "orange";
+
+
+
+Array.from(document.getElementsByTagName("li")).forEach(element => {
+    element.style.background = "red";
+    
+});
+</script>
+</html>
