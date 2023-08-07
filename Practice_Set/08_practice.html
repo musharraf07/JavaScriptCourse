@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bulb{
+            height: 340px;
+            width: 340px;
+            background: yellow;
+        }
+        .bulb-container{
+            height: 340px;
+            width: 340px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h2>Hello waiter</h2>
+    <button onclick="alert('please give me one plate of pani puri')">pani puri</button>
+    <button onclick="alert('please give me one plate of dahi puri')">dahi puri</button>
+    <button onclick="alert('please give me one plate of shev puri')">shev puri</button>
+
+    <h1>Bookmarks</h1>
+    <button id='linkedin'>Linkedin</button>
+    <a href="https://www.instagram.com/"><button id='instagram'>Instagram</button></a>
+    <a href="https://twitter.com/home?lang=en"></a><button id='twitter'>Twitter</button> -->
+
+    <div id = 'bulb' class="bulb-container bulb">
+
+    </div>
+</body>
+<script>
+
+    // document.getElementById('linkedin').addEventListener("click", function(){
+    //     window.location = "https://www.linkedin.com/";
+    //     win.focus();
+    // })
+
+
+    setInterval(async function () {
+        document.querySelector('#bulb').classList.toggle('bulb')
+                
+    }, 1000);
+
+
+</script>
+</html>
