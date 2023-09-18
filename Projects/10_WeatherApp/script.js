@@ -4,6 +4,7 @@ const weather_img = document.querySelector('#weather_img');
 const temperature = document.querySelector('.temperature');
 const description = document.querySelector('.description');
 const humidity = document.querySelector('.humidity');
+const cloud = document.querySelector('.cloud');
 const windspeed = document.querySelector('.wind');
 const errorBox = document.querySelector('.error-box');
 const weather_body = document.querySelector('.weather-body');
@@ -42,6 +43,7 @@ async function searchweather(city){
 
     humidity.innerHTML = `${weather_data.main.humidity}%`;
     windspeed.innerHTML = `${weather_data.wind.speed}Km/hr`;
+    cloud.innerHTML = `${weather_data.clouds.all}%`;
 
     switch (weather_data.weather[0].main) {
         case 'Clouds':
