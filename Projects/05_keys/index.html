@@ -2,41 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Event KeyCodes</title>
-    <link rel="stylesheet" type="text/css" href="../styles.css" />
-    <style>
-      table,
-      th,
-      td {
-        border: 1px solid #e7e7e7;
-      }
-      .project {
-        background-color: #1c1c1c;
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 100vh;
-      }
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-      .color {
-        color: aliceblue;
-        display: flex;
-        flex-direction: row;
-      }
-    </style>
+    <title>Password Generator | JavaScript Project</title>
   </head>
   <body>
-    <div class="project">
-      <div id="insert">
-        <div class="key">Press the key and watch magic</div>
+    <div class="container">
+      <h1>Password Generator</h1>
+
+      <div class="inputBox">
+        <input type="text" class="passBox" id="passBox" disabled />
+        <span class="material-icons" id="copyIcon">content_copy</span>
       </div>
+
+      <input type="range" min="1" max="20" value="8" id="inputSlider" />
+
+      <div class="row">
+        <p>Password Length</p>
+        <span id="sliderValue"></span>
+      </div>
+
+      <div class="row">
+        <label for="lowercase">Include Lowercase Letters (a-z)</label>
+        <input type="checkbox" name="lowercase" id="lowercase" checked/>
+      </div>
+
+      <div class="row">
+        <label for="uppercase">Include Uppercase Letters (A-Z)</label>
+        <input type="checkbox" name="uppercase" id="uppercase" checked/>
+      </div>
+
+      <div class="row">
+        <label for="numbers">Include Numbers (0-9)</label>
+        <input type="checkbox" name="numbers" id="numbers" checked/>
+      </div>
+
+      <div class="row">
+        <label for="symbols">Include Symbols (@-*)</label>
+        <input type="checkbox" name="symbols" id="symbols" checked/>
+      </div>
+
+      <button type="button" class="genBtn" id="genBtn">
+        Generate Password
+      </button>
     </div>
 
-    
+    <script src="script.js"></script>
   </body>
-  <script src="./chaiaurcode.js"></script>
 </html>
