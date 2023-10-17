@@ -11,9 +11,10 @@ const weather_body = document.querySelector('.weather-body');
 
 cityInput.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
+        event.preventDefault(); 
         searchweather(cityInput.value);
         console.log(cityInput.value);
-        
+
     }
 })
 
