@@ -9,7 +9,11 @@ const windspeed = document.querySelector('.wind');
 const errorBox = document.querySelector('.error-box');
 const weather_body = document.querySelector('.weather-body');
 
-
+cityInput.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        searchweather(cityInput.value);
+    }
+})
 
 search.addEventListener('click', () =>{
     searchweather(cityInput.value);
